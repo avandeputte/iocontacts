@@ -58,7 +58,7 @@ if [ -z "$DBS" ]; then
 fi
 DB_HOST="${DBS%%:*}"; r="${DBS#*:}"; DB_PORT="${r%%/*}"; r="${r#*/}"; DB_NAME="${r%%:*}"; r="${r#*:}"; DB_USER="${r%%:*}"; DB_PASSWORD="${r#*:}"
 # the Shared ioSuite database (accounts, sessions and settings shared by the ioThing apps); an install from before
-# 0.4.6 kept it as IOTHING_AUTH_DB_* (database and user `auth`): its values are the defaults, then written as IOSUITE_DB_*
+# 0.4.7 kept it as IOTHING_AUTH_DB_* (database and user `auth`): its values are the defaults, then written as IOSUITE_DB_*
 suiteenv() { v="$(getenv "IOSUITE_DB_$1")"; [ -n "$v" ] || v="$(getenv "IOTHING_AUTH_DB_$1")"; printf '%s' "$v"; }
 if [ -z "$SDBS" ]; then
   if [ -n "$(getenv IOTHING_AUTH_DB_HOST)$(getenv IOTHING_AUTH_DB_NAME)$(getenv IOTHING_AUTH_DB_USER)" ] && [ -z "$(getenv IOSUITE_DB_NAME)" ]; then

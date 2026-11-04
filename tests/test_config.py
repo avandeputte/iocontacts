@@ -1,5 +1,5 @@
 """The Shared ioSuite database settings: IOSUITE_DB_* with `iosuite` defaults, and the IOTHING_AUTH_DB_* of installs
-from before 0.4.6 still honoured as they were."""
+from before 0.4.7 still honoured as they were."""
 import json
 import os
 import subprocess

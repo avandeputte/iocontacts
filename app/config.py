@@ -30,7 +30,7 @@ DB_PASSWORD = env("DB_PASSWORD", "contacts")
 
 # The Shared ioSuite database (MariaDB, `iosuite`): the suite's accounts, passwords, sessions, app passwords and roles
 # (the iothing-auth library) and the settings shared by every ioThing app. IOSUITE_DB_* set it; by default it is on the
-# same server as the contacts. Installs from before 0.4.6 set IOTHING_AUTH_DB_* (the library's own names, database and
+# same server as the contacts. Installs from before 0.4.7 set IOTHING_AUTH_DB_* (the library's own names, database and
 # user `auth`): those still work and keep their old defaults, so an update changes nothing for them.
 _LEGACY_SUITE = any(k.startswith("IOTHING_AUTH_DB_") for k in os.environ)
 _SUITE_DEFAULTS = ({"HOST": "127.0.0.1", "PORT": "3306", "NAME": "auth", "USER": "auth", "PASSWORD": "auth"} if _LEGACY_SUITE
